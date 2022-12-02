@@ -1,0 +1,280 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{6E0BB1EB-5825-4E4A-8143-739D5A22744F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>WindowsFormsApp1</RootNamespace>
+    <AssemblyName>WindowsFormsApp1</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Add_new_products.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Add_new_products.Designer.cs">
+      <DependentUpon>Add_new_products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin.Designer.cs">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admins.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admins.Designer.cs">
+      <DependentUpon>Admins.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin_update_customers.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin_update_customers.Designer.cs">
+      <DependentUpon>Admin_update_customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="brands.cs">
+      <DependentUpon>SupermarkertModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="categories.cs">
+      <DependentUpon>SupermarkertModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="customer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customer.Designer.cs">
+      <DependentUpon>customer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="customers.cs">
+      <DependentUpon>SupermarkertModel1.tt</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="customers.Designer.cs">
+      <DependentUpon>customers.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeForAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeForAdmin.Designer.cs">
+      <DependentUpon>HomeForAdmin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HomeForCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HomeForCustomer.Designer.cs">
+      <DependentUpon>HomeForCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="orders.cs">
+      <DependentUpon>SupermarkertModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="order_items.cs">
+      <DependentUpon>SupermarkertModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="products.cs">
+      <DependentUpon>SupermarkertModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="showP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="showP.Designer.cs">
+      <DependentUpon>showP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="staffs.cs">
+      <DependentUpon>SupermarkertModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="stocks.cs">
+      <DependentUpon>SupermarkertModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="stores.cs">
+      <DependentUpon>SupermarkertModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SupermarkertModel1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SupermarkertModel1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SupermarkertModel1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SupermarkertModel1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="SupermarkertModel1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SupermarkertModel1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SupermarkertModel11.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SupermarkertModel1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="SuperMarketDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>SuperMarketDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="UpdateCustomerInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UpdateCustomerInfo.Designer.cs">
+      <DependentUpon>UpdateCustomerInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="update_products.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="update_products.Designer.cs">
+      <DependentUpon>update_products.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Add_new_products.resx">
+      <DependentUpon>Add_new_products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin.resx">
+      <DependentUpon>Admin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admins.resx">
+      <DependentUpon>Admins.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin_update_customers.resx">
+      <DependentUpon>Admin_update_customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customer.resx">
+      <DependentUpon>customer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="customers.resx">
+      <DependentUpon>customers.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeForAdmin.resx">
+      <DependentUpon>HomeForAdmin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HomeForCustomer.resx">
+      <DependentUpon>HomeForCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="showP.resx">
+      <DependentUpon>showP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UpdateCustomerInfo.resx">
+      <DependentUpon>UpdateCustomerInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="update_products.resx">
+      <DependentUpon>update_products.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EntityDeploy Include="SupermarkertModel1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>SupermarkertModel11.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="SupermarkertModel1.edmx.diagram">
+      <DependentUpon>SupermarkertModel1.edmx</DependentUpon>
+    </None>
+    <None Include="SuperMarketDataSet.xsc">
+      <DependentUpon>SuperMarketDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="SuperMarketDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>SuperMarketDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="SuperMarketDataSet.xss">
+      <DependentUpon>SuperMarketDataSet.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\c.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="SupermarkertModel1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>SupermarkertModel1.Context.cs</LastGenOutput>
+      <DependentUpon>SupermarkertModel1.edmx</DependentUpon>
+    </Content>
+    <Content Include="SupermarkertModel1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>SupermarkertModel1.edmx</DependentUpon>
+      <LastGenOutput>SupermarkertModel1.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
